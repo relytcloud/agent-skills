@@ -1,0 +1,29 @@
+# Relyt One agent skills
+
+> Agent Skills for Relyt One, a serverless Postgres service: projects, branches and computes, connection strings,
+> the Open API (https://relytone.data.cloud/api/v1, API key in `x-api-key`), extensions (pgvecto.rs `vectors`, not
+> pgvector), row-level security with NOBYPASSRLS roles, and managed auth (Preview) with the `@relyt/auth` SDK.
+> Relyt One has no MCP server, CLI or Data API yet; do not use or invent them.
+
+## Skills
+
+- [relyt-one](skills/relyt-one/SKILL.md): overview, console workflow, connecting (direct and pooled hosts), Open API, extensions, RLS pitfall
+- [relyt-managed-auth](skills/relyt-managed-auth/SKILL.md): managed auth (Preview) integration rules, server verification, Next.js middleware, RLS with JWT claims
+
+## Relyt One references
+
+- [Open API](skills/relyt-one/references/open-api.md): every supported endpoint with curl examples
+- [Extensions](skills/relyt-one/references/extensions.md): pgvecto.rs syntax, porting from pgvector, gen_random_uuid, pg_trgm, citext, pgcrypto
+- [Row-level security](skills/relyt-one/references/rls.md): BYPASSRLS pitfall, NOBYPASSRLS application role, RLS checklist
+
+## Managed auth references
+
+- [Server and database](skills/relyt-managed-auth/references/server-and-database.md): claims, authorization module, transaction-local identity, RLS policies
+- [Browser and social sign-in](skills/relyt-managed-auth/references/browser-and-social.md): session tokens, callback page rules, teams
+- [Troubleshooting](skills/relyt-managed-auth/references/troubleshooting.md): symptoms and checks
+
+## Optional
+
+- [@relyt/auth SDK](https://github.com/relytcloud/relyt-auth-js#readme): JWT verification, token client, Next.js entry, social sign-in
+- [TODO example](https://github.com/relytcloud/relyt-auth-examples/tree/main/todo): reference app for managed auth with teams and RLS
+- [README](README.md): installation for Claude Code, Codex, Cursor and skills.sh; roadmap
