@@ -1,6 +1,6 @@
 ---
 name: relyt-one
-description: Relyt One serverless Postgres. Use when the user wants to create or connect to a Relyt One database, get a connection string (direct or pooled), automate organizations, projects, computes or API keys through the Relyt One Open API with an API key, pick Postgres extensions on Relyt One (vector search with pgvecto.rs, UUIDs, trigram search), or use row-level security on Relyt One. Not for the managed-auth integration; see the relyt-managed-auth skill.
+description: Relyt One serverless Postgres. Use when the user wants to create or connect to a Relyt One database, get a connection string (direct or pooled), automate organizations, projects, branches, computes or API keys through the Relyt One Open API with an API key, pick Postgres extensions on Relyt One (vector search with pgvecto.rs, UUIDs, trigram search), or use row-level security on Relyt One. Not for the managed-auth integration; see the relyt-managed-auth skill.
 license: MIT
 metadata:
   author: relytcloud
@@ -68,7 +68,7 @@ curl -sS https://relytone.data.cloud/api/v1/organizations -H "x-api-key: $RELYT_
 ```
 
 The `id` values in responses are the identifiers to pass back in paths and parameters (`orgId`, project `id`,
-compute `id`). Every supported call, with request bodies, is in [references/open-api.md](references/open-api.md).
+compute `id`); branch calls take the branch `slug` instead. Every supported call, with request bodies, is in [references/open-api.md](references/open-api.md).
 Use only the endpoints listed there.
 
 ## Extensions

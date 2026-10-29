@@ -12,13 +12,16 @@
     {"method": "DELETE", "path": "/projects/{id}"},
     {"method": "GET", "path": "/projects/{id}/computes", "query": ["compute"]},
     {"method": "GET", "path": "/projects/{id}/computes/{computeId}"},
+    {"method": "GET", "path": "/projects/{id}/branches"},
+    {"method": "POST", "path": "/projects/{id}/branches", "body": ["name", "parentBranchSlug", "pointInTime"]},
+    {"method": "PATCH", "path": "/projects/{id}/branches/{branchSlug}", "body": ["name"]},
+    {"method": "DELETE", "path": "/projects/{id}/branches/{branchSlug}"},
+    {"method": "GET", "path": "/regions"},
     {"method": "GET", "path": "/user/api-keys"},
     {"method": "POST", "path": "/user/api-keys", "body": ["name", "description"]},
     {"method": "DELETE", "path": "/user/api-keys", "query": ["id"]}
   ],
   "excluded": [
-    {"method": "POST", "path": "/projects/{id}/computes/{computeId}/metrics", "reason": "the documented request body does not match what the service accepts"},
-    {"method": "GET", "path": "/projects/{id}/databases", "reason": "not served at this path"},
-    {"method": "POST", "path": "/projects/{id}/databases", "reason": "not served at this path"}
+    {"method": "POST", "path": "/projects/{id}/computes/{computeId}/metrics", "reason": "returns fixed sample values, not measurements of the compute"}
   ]
 }
