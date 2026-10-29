@@ -1,0 +1,14 @@
+{
+  "name": "relyt-one",
+  "displayName": "Relyt One",
+  "version": "0.1.0",
+  "description": "Skills for Relyt One serverless Postgres: projects, connections, Open API, extensions, row-level security, and managed auth (Preview)",
+  "author": {
+    "name": "Relyt",
+    "url": "https://github.com/relytcloud"
+  },
+  "homepage": "https://github.com/relytcloud/agent-skills",
+  "repository": "https://github.com/relytcloud/agent-skills",
+  "license": "MIT",
+  "keywords": ["relyt", "postgres", "serverless", "database", "auth", "rls", "pgvecto.rs"]
+}

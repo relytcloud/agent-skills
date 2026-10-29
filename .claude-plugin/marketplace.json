@@ -1,0 +1,16 @@
+{
+  "name": "relyt",
+  "description": "Agent skills for Relyt One, serverless Postgres",
+  "owner": {
+    "name": "Relyt",
+    "url": "https://github.com/relytcloud"
+  },
+  "plugins": [
+    {
+      "name": "relyt-one",
+      "source": "./",
+      "description": "Relyt One serverless Postgres: projects, connections, Open API, extensions, RLS, and managed auth (Preview)",
+      "category": "database"
+    }
+  ]
+}
