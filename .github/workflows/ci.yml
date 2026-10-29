@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the hygiene scan reads the full history
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml==6.0.2
+      - name: SKILL.md frontmatter and plugin manifests
+        run: python3 scripts/check_skills.py
+      - name: Links
+        run: python3 scripts/check_links.py
+      - name: Open API calls in examples
+        run: python3 scripts/check_api_paths.py
+      - name: Hygiene scan (files and history)
+        run: python3 scripts/scan.py

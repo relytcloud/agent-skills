@@ -1,0 +1,24 @@
+{
+  "base": "https://relytone.data.cloud/api/v1",
+  "note": "Open API calls the skills may show. Each entry must exist in the published OpenAPI spec (check with --spec) and must work in the service today. Body and query lists may be narrower than the spec.",
+  "endpoints": [
+    {"method": "GET", "path": "/organizations"},
+    {"method": "GET", "path": "/organizations/{id}"},
+    {"method": "PATCH", "path": "/organizations/{id}", "body": ["name"]},
+    {"method": "GET", "path": "/projects", "query": ["orgId"]},
+    {"method": "POST", "path": "/projects", "body": ["name", "orgId", "region", "password"]},
+    {"method": "GET", "path": "/projects/{id}"},
+    {"method": "PATCH", "path": "/projects/{id}", "body": ["name"]},
+    {"method": "DELETE", "path": "/projects/{id}"},
+    {"method": "GET", "path": "/projects/{id}/computes", "query": ["compute"]},
+    {"method": "GET", "path": "/projects/{id}/computes/{computeId}"},
+    {"method": "GET", "path": "/user/api-keys"},
+    {"method": "POST", "path": "/user/api-keys", "body": ["name", "description"]},
+    {"method": "DELETE", "path": "/user/api-keys", "query": ["id"]}
+  ],
+  "excluded": [
+    {"method": "POST", "path": "/projects/{id}/computes/{computeId}/metrics", "reason": "the documented request body does not match what the service accepts"},
+    {"method": "GET", "path": "/projects/{id}/databases", "reason": "not served at this path"},
+    {"method": "POST", "path": "/projects/{id}/databases", "reason": "not served at this path"}
+  ]
+}
