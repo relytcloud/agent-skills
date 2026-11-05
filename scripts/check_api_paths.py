@@ -110,7 +110,7 @@ def check_docs():
                     errors.append(f"{rel}: {method} {path}: query parameters not allowed: {sorted(bad_q)}")
                 if bad_b:
                     errors.append(f"{rel}: {method} {path}: body fields not allowed: {sorted(bad_b)}")
-        # API paths mentioned outside curl, e.g. https://relytone.data.cloud/api/v1/foo
+        # API paths mentioned outside curl, e.g. https://relyt.one/api/v1/foo
         for m in re.finditer(re.escape(BASE) + r"(/[A-Za-z0-9_/{}$.-]+)", text):
             path = m.group(1).rstrip(".")
             if not any(norm(path) == k[1] for k in table):

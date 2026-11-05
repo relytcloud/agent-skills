@@ -10,7 +10,7 @@ metadata:
 # Relyt One
 
 Relyt One is a serverless Postgres service. You manage it in the web console at
-<https://relytone.data.cloud> and, for automation, through its Open API.
+<https://relyt.one> and, for automation, through its Open API.
 
 Resources form a tree:
 
@@ -34,7 +34,7 @@ Organization -> Project -> Branch (a tree; one primary branch) -> Compute (a Pos
 
 ## Get started in the console
 
-1. Sign in at <https://relytone.data.cloud> and pick (or create) an organization.
+1. Sign in at <https://relyt.one> and pick (or create) an organization.
 2. Create a project: choose a name, a region and the password of the default database user. The project gets a
    primary branch and a compute; wait until the compute is `READY`.
 3. On the branch page, open **Connect** to copy the connection details. The default database user is
@@ -59,12 +59,12 @@ psql "$DATABASE_URL"
 
 ## Automate with the Open API
 
-Base URL `https://relytone.data.cloud/api/v1`. Create an API key in the console (organization **Settings**). The
+Base URL `https://relyt.one/api/v1`. Create an API key in the console (organization **Settings**). The
 full key is shown only once, at creation. Send it as `x-api-key` (or `Authorization: Bearer <key>`):
 
 ```bash
 export RELYT_API_KEY=...   # from the console; never commit it
-curl -sS https://relytone.data.cloud/api/v1/organizations -H "x-api-key: $RELYT_API_KEY"
+curl -sS https://relyt.one/api/v1/organizations -H "x-api-key: $RELYT_API_KEY"
 ```
 
 The `id` values in responses are the identifiers to pass back in paths and parameters (`orgId`, project `id`,

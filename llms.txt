@@ -1,7 +1,7 @@
 # Relyt One agent skills
 
 > Agent Skills for Relyt One, a serverless Postgres service: projects, branches and computes, connection strings,
-> the Open API (https://relytone.data.cloud/api/v1, API key in `x-api-key`), extensions (pgvecto.rs `vectors`, not
+> the Open API (https://relyt.one/api/v1, API key in `x-api-key`), extensions (pgvecto.rs `vectors`, not
 > pgvector), row-level security with NOBYPASSRLS roles, and managed auth (Preview) with the `@relyt/auth` SDK.
 > Relyt One has no MCP server, CLI or Data API yet; do not use or invent them.
 

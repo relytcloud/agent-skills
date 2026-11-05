@@ -1,13 +1,13 @@
 # Relyt One Open API
 
-Base URL: `https://relytone.data.cloud/api/v1`
+Base URL: `https://relyt.one/api/v1`
 
 Authentication: an API key created in the console (organization **Settings**), sent as `x-api-key: <key>` or
 `Authorization: Bearer <key>`. Requests act as the user who owns the key and see only that user's organizations.
 
 ```bash
 export RELYT_API_KEY=...          # never commit or print it
-export RELYT_API=https://relytone.data.cloud/api/v1
+export RELYT_API=https://relyt.one/api/v1
 ```
 
 Rules:

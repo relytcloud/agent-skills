@@ -1,5 +1,5 @@
 {
-  "base": "https://relytone.data.cloud/api/v1",
+  "base": "https://relyt.one/api/v1",
   "note": "Open API calls the skills may show. Each entry must exist in the published OpenAPI spec (check with --spec) and must work in the service today. Body and query lists may be narrower than the spec.",
   "endpoints": [
     {"method": "GET", "path": "/organizations"},
