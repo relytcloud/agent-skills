@@ -1,7 +1,7 @@
 # Relyt One agent skills
 
 [Agent Skills](https://agentskills.io) that teach coding agents (Claude Code, Codex, Cursor and others) how to
-work with [Relyt One](https://relytone.data.cloud), a serverless Postgres service.
+work with [Relyt One](https://relyt.one), a serverless Postgres service.
 
 | Skill | Use it for |
 |---|---|
